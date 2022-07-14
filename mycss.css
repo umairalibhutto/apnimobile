@@ -1,0 +1,371 @@
+:root{
+    --mylight:rgb(235, 250, 247);
+    --mygreen:rgb(71, 255, 83);
+    --myblue:rgb(69, 156, 255);
+    --mypurple:rgb(142, 136, 199);
+    --myaliceblue:aliceblue;
+}
+
+*::selection{
+color: red;
+}
+
+
+*{
+
+  scroll-behavior: smooth;
+}
+
+/* navbar */
+
+
+
+.mynavigation{
+    color: var(--myaliceblue);
+    background-color: black;
+}
+
+.mynavigation ul{
+    margin: auto;
+    font-size: 100%;
+}
+.mynavigation .a {
+    color: var(--myaliceblue);
+    margin: auto;
+    border-radius: 10px;
+    font-weight: 500;
+   
+}
+.mynavigation .a:hover{
+    color: var(--mygreen);
+    transition: 300ms;
+    box-shadow:var(--mypurple) 0px 5px 10px 1px;
+}
+/* button collapse */
+.navfather{
+position: relative;
+
+}
+.navchild{
+    display: none;
+    position:absolute;
+    color: black;
+    width: 60%;
+    z-index: 6;
+}
+/* logo */
+.absolute{
+    position: absolute;
+
+}
+.myanchor img{
+    height: 20vh;
+    width: 100%;
+    
+}
+.myanchor{
+    position: relative;
+    
+}
+
+
+/* section */
+.section{
+    overflow-x: hidden;
+    background-color: var(--mylight);
+}
+
+/* sidebar */
+.mycolumn{
+    background-color: black;
+    border-radius: 0px 0px 50px 50px;
+}
+.mycolumn a{
+    color: var(--myaliceblue);
+    font-size: 15px;
+    text-decoration: none;
+}
+.mycolumn a:hover{
+    text-decoration: none;
+}
+.mycolumn li{
+  word-wrap: break-word;
+}
+.mycolumn li:hover{
+    color: var(--mygreen);
+    margin: 0px;
+    transition: 200ms;
+    border-radius: 10px;
+    box-shadow: var(--mypurple) 10px 0px 10px -2px;
+    
+}
+
+.mycolumn h4{
+    color: var(--myaliceblue);
+    text-decoration: underline;
+}
+.mycolumn h5{
+    
+    color: var(--myaliceblue);
+    text-indent: 1%;
+    text-decoration: underline;
+}
+
+
+/* images and cards of mobiles */
+.margin{
+    margin-left: 5%;
+}
+
+.images{
+    
+    width: 50%;
+    height: 30vh;
+}
+
+
+.name-of-mobile{
+
+    border-radius: 30px;
+    text-align: center;
+    text-decoration: none;
+}
+.name-of-mobile:hover{
+    cursor: pointer;   
+}
+
+.name-of-mobile a{
+    font-size: 90%;
+    color: black;
+    transition: 700ms;
+}
+.name-of-mobile a:hover{
+    color: black;
+    text-decoration: none;
+}
+.price{
+    font-size: 90%;
+}
+
+
+.details-mobile{
+    font-size:90%;
+    border-radius: 20px;
+    padding: 4% 10% 4% 10%; 
+    box-shadow: var(--myblue) 0px 0px 3px 0px;
+    background-color: rgb(240, 246, 255);
+    text-align: center;
+    text-decoration: none;
+}
+.details-mobile:hover{
+    cursor: pointer;
+    transition: 300ms;
+    box-shadow: black 0px 0px 5px 2px;
+    
+}
+
+a .details-mobile {
+    color: black;
+    transition: 300ms;
+    
+    
+}
+a .details-mobile:hover{
+    text-decoration: none;
+    color: var(--myblue);
+
+}
+.img-align{
+    text-align: center;
+}
+ /* 50% below */
+@media only screen and  (min-width:2900px){
+    
+    .imagestext1 a{
+      font-size: 100%;
+  }
+  .imagestext2{
+      font-size: 100%;
+  }
+  .img-align{
+      text-align: center;
+  }
+
+}
+  /* 110% - 150% */
+
+  @media only screen and (max-width:1900px) and (min-width:1500px){
+    
+      .imagestext1 a{
+        font-size: 90%;
+    }
+    .imagestext2{
+        font-size: 100%;
+    }
+    .img-align{
+        text-align: center;
+    }
+  }
+  /* 150% - 175% */
+  @media only screen and (max-width:1500px) and (min-width:1100px){
+    
+    .imagestext1 a{
+      font-size: 100%;
+  }
+  .imagestext2{
+    font-size: 50%;
+    
+}
+
+}
+/* 175% - 300%*/
+  @media only screen and (max-width:1100px) and (min-width:768px) {
+    
+      .imagestext1 a{
+        font-size: 100%;
+    }
+    .imagestext2{
+        font-size: 50%;
+    }
+    
+    
+  }
+  /* 300% onward */
+  @media only screen and (max-width:767px) and (min-width:300px) {
+    .images{
+        margin-left: 25%;
+        width: 40%;
+        height: 100vh;
+    }
+    .imagestext1 a{
+        font-size: 100%;
+    }
+    .img-align{
+        text-align: left;
+    }
+    .myanchor{
+        left: 480%;
+        
+    }
+   
+  }
+  @media only screen and (max-width:299px){
+    
+    .myanchor{
+        top: -5px;
+        left: 400%;
+        
+    }
+   
+  }
+  
+  /* contact us */
+.contact-body{
+  background-color: white;
+  color: black;
+  padding: 2%;
+}
+.contact-body input{
+  padding: 2%;
+  border-radius: 30px;
+  text-align: center;
+  width: 100%;
+  background-color: black;
+  color: white;
+
+}
+.contact-body input::placeholder{
+    opacity: 1;
+    color:white;
+}
+.contact-body label{
+  width: 100%;
+  
+  text-align: center;
+}
+.contact-textarea{
+  border-radius: 5px;
+
+  background-color: black;
+  color: white;
+  resize: none;
+  width: 100%;
+}
+.contact-textarea::placeholder{
+    text-align: center;
+    padding-top: 8%;
+    opacity: 1;
+    color:white;
+}
+
+
+/* footer */
+.footer{
+    float: right;
+    padding-right: 10%;
+    list-style-type: circle;
+}
+.footer a{
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: x-large;
+    font-style: italic;
+    color: black;
+    padding: 20px;
+}
+.footer a:hover{
+    transition: 500ms;
+    color:var(--myblue);
+    
+}
+
+.fa{
+    font-size: 100%;
+    color: black;
+    text-decoration: none;
+}
+.fa:hover{
+    font-weight: bold;
+    transition: 100ms;
+    color:black;
+}
+.fimage{
+    height: 300px;
+    width: 100%;
+    
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* scroll bar */
+body::-webkit-scrollbar {
+    width: 0.5em;
+ 
+  }
+  
+  body::-webkit-scrollbar-track {
+    background:linear-gradient(grey,black);
+  }
+  
+  body::-webkit-scrollbar-thumb {
+    background: rgb(142, 255, 149);
+    border-radius: 100vw;
+  }
+  body::-webkit-scrollbar-thumb:hover {
+    
+    background: var(--mygreen);
+    border-radius: 100vw;
+    border: black 1px solid;
+  }
+  
+  
+  

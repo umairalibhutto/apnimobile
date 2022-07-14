@@ -1,0 +1,676 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <title>Apni Mobile</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <link rel="icon" href="assets/images/favicon/favicon.ico">
+  <link rel="stylesheet" href="mycss.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&display=swap">
+  <link rel="stylesheet" href="assets/vendor/css/templatemo-seo-dream.css">
+  <link rel="stylesheet" href="assets/vendor/css/animated.css">
+  <link rel="stylesheet" href="assets/vendor/css/bootstrap.min.css">
+  <link rel="stylesheet" href="assets/vendor/css/owl.carousel.min.css">
+
+</head>
+
+<body>
+  <!-- navbar start -->
+  <header id="navbar">
+    <nav class="navbar navbar-expand-md mynavigation">
+      <a data-tilt class="navbar-brand myanchor" href="index.html"><img data-wow-duration="1s"
+          class="wow rollIn rounded" src="assets/images/logo/logo1.png" alt=""></a>
+      <button style="border: rgb(142, 136, 199) 1px solid; padding-bottom: 10px;" class="navbar-toggler d-lg-none"
+        type="button" data-toggle="collapse" data-target="#collapsibleNavId" aria-controls="collapsibleNavId"
+        aria-expanded="false" aria-label="Toggle navigation">
+        <span style="color: rgb(71, 255, 83);">|||</span>
+      </button>
+      <div class="collapse navbar-collapse" id="collapsibleNavId">
+        <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+          <li data-tilt class=" nav-item active">
+            <a class="wow rollIn nav-link a" data-wow-duration="1s" href="index.php">Home <span
+                class="sr-only">(current)</span></a>
+          </li>
+          <span> &nbsp; &nbsp;</span>
+          <span> &nbsp; &nbsp;</span>
+
+
+
+          <li data-tilt class="nav-item active">
+            <a class="wow rollIn nav-link a" data-wow-duration="1s" href="view_all_ajax.php">All Mobiles<span
+                class="sr-only">(current)</span></a>
+          </li>
+          <span> &nbsp; &nbsp;</span>
+          <span> &nbsp; &nbsp;</span>
+
+
+          <li data-tilt class="nav-item active">
+            <a id="quest" class="wow rollIn nav-link a" data-wow-duration="1s" href="contact_us.php">Contact Us <span
+                class="sr-only">(current)</span></a>
+          </li>
+        </ul>
+
+
+
+      </div>
+    </nav>
+  </header>
+  <!-- navbar end -->
+  <!-- main start -->
+  <main>
+    <section class="sect">
+
+      <div class="container-fluid">
+        <div class="row">
+          <!-- sidebar start -->
+          <div class="col-md-2 mycolumn">
+          <br>
+          <div>
+
+            
+            <h4>Brands</h4>
+            <ul class="wow bounceInLeft" data-wow-duration="1s" >
+              
+              <?php 
+                $qry="select brand_id,brand_name from brands";
+                $result = $myConnection->query($qry);
+                while($row = $result->fetch_assoc())
+		{
+            
+      echo '<a href="brand.php?id='.$row['brand_id'].'">
+        <li data-tilt>'.$row['brand_name'].'</li>
+      </a>';
+    }
+              ?>
+            </ul>
+          </div>
+          <div>
+            <h4>Search By</h4>
+            <ul class="wow bounceInLeft" data-wow-duration="1s">
+              <h5>Price:</h5>
+              <a href="searching.php?search=price>50000&and=&search1=">
+                <li data-tilt>Price &gt; 50,000 .Rs</li>
+              </a>
+              <a href="searching.php?search=price>=40000&and=and&search1=price<=50000">
+                <li data-tilt>40,000 - 50,000 .Rs</li>
+              </a>
+              <a href="searching.php?search=price>=30000&and=and&search1=price<=40000">
+                <li data-tilt>30,000 - 40,000 .Rs</li>
+              </a>
+              <a href="searching.php?search=price>=20000&and=and&search1=price<=30000">
+                <li data-tilt>20,000 - 30,000 .Rs</li>
+              </a>
+              <a href="searching.php?search=price>10000&and=and&search1=price<20000">
+                <li data-tilt>10,000 - 20,000 .Rs</li>
+              </a>
+              <a href="searching.php?search=price<10000&and=&search1=">
+                <li data-tilt>Price &lt; 10,000 .Rs</li>
+              </a>
+            </ul>
+            <h5>Camera</h5>
+            <ul class="wow bounceInLeft" data-wow-duration="1s">
+              
+              <a href="searching.php?search=camera>=12&and=&search1=">
+                <li data-tilt>Camera &gt;&equals; 12 MP</li>
+              </a>
+              <a href="searching.php?search=camera=8&and=&search1=">
+                <li data-tilt>8 MP</li>
+              </a>
+              <a href="searching.php?search=camera=5&and=&search1=">
+                <li data-tilt>5 MP</li>
+              </a>
+              <a href="searching.php?search=camera=3&and=&search1=">
+                <li data-tilt>3 MP</li>
+              </a>
+              <a href="searching.php?search=camera=vga&and=&search1=">
+                <li data-tilt>VGA</li>
+              </a>
+            </ul>
+
+          </div>
+          
+        </div>
+          <!-- sidebar end -->
+
+
+          <div class="col-md-10">
+            <br>
+
+            <!-- view each -->
+            <div class="mymain">
+              <div class="nameofmobile">
+                samsung
+              </div>
+              <div class="maindetails">
+                <div class="row">
+                  <div class="col-md-3">
+                    <div class="mobilephoto"></div>
+                  </div>
+                  <div class="col-md-9">
+                    <div class="row">
+                      <div class="col-md-3">size</div>
+                      <div class="col-md-3">camera</div>
+                      <div class="col-md-3">ram</div>
+                      <div class="col-md-3">battery</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div>
+                compare and opinions
+              </div>
+              <!-- table -->
+              <div>
+
+                <table cellspacing="0" style="max-height: 31px;">
+                  <tbody>
+                    <hr>
+                    <tr>
+                
+                      <th style="vertical-align: top;" rowspan="15" scope="row">Network</th>
+                      <td><a href="">Technology</a></td>
+                      <td><a href="#">GSM / CDMA /
+                          HSPA / EVDO / LTE / 5G</a></td>
+                    </tr>
+                   
+                    <tr class="">
+                      <td class=""><a href="network-bands.php3">2G bands</a></td>
+                      <td class="" data-spec="net2g">GSM 850 / 900 / 1800 / 1900 </td>
+                    </tr>
+                    <tr class="">
+                      <td class="">&nbsp;</td>
+                      <td class="">CDMA 800 / 1900 </td>
+                    </tr>
+                    <tr class="">
+                      <td class=""><a href="network-bands.php3">3G bands</a></td>
+                      <td class="" data-spec="net3g">HSDPA 850 / 900 / 1700(AWS) / 1900 / 2100 </td>
+                    </tr>
+                    <tr class="">
+                      <td class="">&nbsp;</td>
+                      <td class="">HSDPA 850 / 900 / 1900 / 2100 </td>
+                    </tr>
+                    <tr class="">
+                      <td class="">&nbsp;</td>
+                      <td class="">CDMA2000 1xEV-DO </td>
+                    </tr>
+                    <tr class="">
+                      <td class=""><a href="network-bands.php3">4G bands</a></td>
+                      <td class="" data-spec="net4g">1, 2, 3, 4, 5, 7, 8, 12, 13, 14, 18, 19, 20, 25, 26, 28, 30, 38,
+                        39, 40, 41, 46, 48, 66, 71</td>
+                    </tr>
+                    <tr class="">
+                      <td class=""><a href="network-bands.php3">5G bands</a></td>
+                      <td class="" data-spec="net5g">2, 5, 25, 41, 66, 71, 260, 261 SA/NSA/Sub6/mmWave</td>
+                    </tr>
+                    <tr class="">
+                      <td class=""><a href="glossary.php3?term=3g">Speed</a></td>
+                      <td class="" data-spec="speed">HSPA 42.2/5.76 Mbps, LTE-A (7CA) Cat20 2000/200 Mbps, 5G</td>
+                    </tr>
+
+
+
+
+
+                  </tbody>
+                </table>
+
+
+                <table cellspacing="0">
+                  <tbody>
+                    <hr>
+
+                    <tr>
+                      <th rowspan="2" scope="row">Launch</th>
+                      <td class=""><a href="glossary.php3?term=phone-life-cycle">Announced</a></td>
+                      <td class="" data-spec="year">2021, August 11</td>
+                    </tr>
+                    <tr>
+                      <td class=""><a href="glossary.php3?term=phone-life-cycle">Status</a></td>
+                      <td class="" data-spec="status">Available. Released 2021, August 27</td>
+                    </tr>
+                  </tbody>
+                </table>
+
+
+                <table cellspacing="0">
+                  <tbody>
+                    <tr>
+                      <th rowspan="6" scope="row">Body</th>
+                      <td class=""><a href="#" onclick="helpW('h_dimens.htm');">Dimensions</a></td>
+                      <td class="" data-spec="dimensions">Ulded: 158.2 x 128.1 x 6.4 mm<br>Folded: 158.2 x 67.1 x
+                        14.4-16 mm</td>
+                    </tr>
+                    <tr>
+                      <td class=""><a href="#" onclick="helpW('h_weight.htm');">Weight</a></td>
+                      <td class="" data-spec="weight">271 g (9.56 oz)</td>
+                    </tr>
+                    <tr>
+                      <td class=""><a href="glossary.php3?term=build">Build</a></td>
+                      <td class="" data-spec="build">Glass front (Gorilla Glass Victus) (folded), plastic front
+                        (ulded), glass back (Gorilla Glass Victus), aluminum frame</td>
+                    </tr>
+                    <tr>
+                      <td class=""><a href="glossary.php3?term=sim">SIM</a></td>
+                      <td class="" data-spec="sim">Nano-SIM and eSIM</td>
+                    </tr>
+                    <tr>
+                      <td class="">&nbsp;</td>
+                      <td class="" data-spec="bodyother">IPX8 water resistant (up to 1.5m for 30 mins)<br>
+                        Stylus support</td>
+                    </tr>
+
+                  </tbody>
+                </table>
+
+
+                <table cellspacing="0">
+                  <tbody>
+                    <tr>
+                      <th rowspan="5" scope="row">Display</th>
+                      <td class=""><a href="glossary.php3?term=display-type">Type</a></td>
+                      <td class="" data-spec="displaytype">Foldable Dynamic AMOLED 2X, 120Hz, HDR10+, 1200 nits
+                        (peak)</td>
+                    </tr>
+                    <tr>
+                      <td class=""><a href="#" onclick="helpW('h_dsize.htm');">Size</a></td>
+                      <td class="" data-spec="displaysize">7.6 inches, 179.9 cm<sup>2</sup> (~88.8% screen-to-body
+                        ratio)</td>
+                    </tr>
+                    <tr>
+                      <td class=""><a href="glossary.php3?term=resolution">Resolution</a></td>
+                      <td class="" data-spec="displayresolution">1768 x 2208 pixels (~374 ppi density)</td>
+                    </tr>
+                    <tr>
+                      <td class="">&nbsp;</td>
+                      <td class="" data-spec="displayother">Cover display:<br>
+                        Dynamic AMOLED 2X, 120Hz, Corning Gorilla Glass Victus<br>
+                        6.2 inches, 832 x 2268 pixels, 25:9 ratio</td>
+                    </tr>
+
+                  </tbody>
+                </table>
+
+
+                <table cellspacing="0">
+                  <tbody>
+                    <tr>
+                      <th rowspan="4" scope="row">Platform</th>
+                      <td class=""><a href="glossary.php3?term=os">OS</a></td>
+                      <td class="" data-spec="os">Android 11, upgradable to Android 12, One UI 4.0</td>
+                    </tr>
+                    <tr>
+                      <td class=""><a href="glossary.php3?term=chipset">Chipset</a></td>
+                      <td class="" data-spec="chipset">Qualcomm SM8350 Snapdragon 888 5G (5 nm)</td>
+                    </tr>
+                    <tr>
+                      <td class=""><a href="glossary.php3?term=cpu">CPU</a></td>
+                      <td class="" data-spec="cpu">Octa-core (1x2.84 GHz Kryo 680 &amp; 3x2.42 GHz Kryo 680 &amp;
+                        4x1.80 GHz Kryo 680)</td>
+                    </tr>
+                    <tr>
+                      <td class=""><a href="glossary.php3?term=gpu">GPU</a></td>
+                      <td class="" data-spec="gpu">Adreno 660</td>
+                    </tr>
+                  </tbody>
+                </table>
+
+
+                <table cellspacing="0">
+                  <tbody>
+                    <tr>
+                      <th rowspan="5" scope="row">Memory</th>
+                      <td class=""><a href="glossary.php3?term=memory-card-slot">Card slot</a></td>
+
+
+                      <td class="" data-spec="memoryslot">No</td>
+                    </tr>
+
+
+
+                    <tr>
+                      <td class=""><a href="glossary.php3?term=dynamic-memory">Internal</a></td>
+                      <td class="" data-spec="internalmemory">256GB 12GB RAM, 512GB 12GB RAM</td>
+                    </tr>
+
+
+                    <tr>
+                      <td class="">&nbsp;</td>
+                      <td class="" data-spec="memoryother">UFS 3.1</td>
+                    </tr>
+
+
+
+                  </tbody>
+                </table>
+
+
+                <table cellspacing="0">
+                  <tbody>
+                    <tr>
+                      <th rowspan="4" scope="row" class="small-line-height">Main Camera</th>
+                      <td class=""><a href="glossary.php3?term=camera">Triple</a></td>
+                      <td class="" data-spec="cam1modules">12 MP, f/1.8, 26mm (wide), 1/1.76", 1.8µm, Dual Pixel
+                        PDAF, OIS<br>
+                        12 MP, f/2.4, 52mm (telephoto), 1/3.6", 1.0µm, PDAF, OIS, 2x optical zoom<br>
+                        12 MP, f/2.2, 123˚, 12mm (ultrawide), 1.12µm</td>
+                    </tr>
+                    <tr>
+                      <td class=""><a href="glossary.php3?term=camera">Features</a></td>
+                      <td class="" data-spec="cam1features">LED flash, HDR, panorama</td>
+                    </tr>
+                    <tr>
+                      <td class=""><a href="glossary.php3?term=camera">Video</a></td>
+                      <td class="" data-spec="cam1video">4K@60fps, 1080p@60/240fps (gyro-EIS), 720p@960fps
+                        (gyro-EIS), HDR10+</td>
+                    </tr>
+                  </tbody>
+                </table>
+
+
+                <table cellspacing="0">
+                  <tbody>
+                    <tr>
+                      <th rowspan="4" scope="row" class="small-line-height">Selfie camera</th>
+                      <td class=""><a href="glossary.php3?term=secondary-camera">Single</a></td>
+                      <td class="" data-spec="cam2modules">4 MP, f/1.8, 2.0µm, under display<br>
+                        Cover camera:<br>
+                        10 MP, f/2.2, 26mm (wide), 1/3", 1.22µm</td>
+                    </tr>
+                    <tr>
+                      <td class=""><a href="glossary.php3?term=secondary-camera">Features</a></td>
+                      <td class="" data-spec="cam2features">HDR</td>
+                    </tr>
+                    <tr>
+                      <td class=""><a href="glossary.php3?term=secondary-camera">Video</a></td>
+                      <td class="" data-spec="cam2video">4K@30fps, 1080p@30fps, gyro-EIS</td>
+                    </tr>
+                  </tbody>
+                </table>
+
+
+
+                <table cellspacing="0">
+                  <tbody>
+                    <tr>
+                      <th rowspan="3" scope="row">Sound</th>
+                      <td class=""><a href="glossary.php3?term=loudspeaker">Loudspeaker</a> </td>
+                      <td class="">Yes, with stereo speakers</td>
+                    </tr>
+
+
+
+                    <tr>
+                      <td class=""><a href="glossary.php3?term=audio-jack">3.5mm jack</a> </td>
+                      <td class="">No</td>
+                    </tr>
+
+
+                    <tr>
+                      <td class="">&nbsp;</td>
+                      <td class="" data-spec="optionalother">32-bit/384kHz audio<br>
+                        Tuned by AKG</td>
+                    </tr>
+
+                  </tbody>
+                </table>
+
+
+                <table cellspacing="0">
+                  <tbody>
+                    <tr>
+                      <th rowspan="9" scope="row">Comms</th>
+                      <td class=""><a href="glossary.php3?term=wi-fi">WLAN</a></td>
+                      <td class="" data-spec="wlan">Wi-Fi 802.11 a/b/g/n/ac/6e, dual-band, Wi-Fi Direct, hotspot</td>
+                    </tr>
+                    <tr>
+                      <td class=""><a href="glossary.php3?term=bluetooth">Bluetooth</a></td>
+                      <td class="" data-spec="bluetooth">5.2, A2DP, LE, aptX HD</td>
+                    </tr>
+                    <tr>
+                      <td class=""><a href="glossary.php3?term=gps">GPS</a></td>
+                      <td class="" data-spec="gps">Yes, with A-GPS, GLONASS, GALILEO, BDS</td>
+                    </tr>
+                    <tr>
+                      <td class=""><a href="glossary.php3?term=nfc">NFC</a></td>
+                      <td class="" data-spec="nfc">Yes</td>
+                    </tr>
+
+
+                    <tr>
+                      <td class=""><a href="glossary.php3?term=fm-radio">Radio</a></td>
+                      <td class="" data-spec="radio">No</td>
+                    </tr>
+
+                    <tr>
+                      <td class=""><a href="glossary.php3?term=usb">USB</a></td>
+                      <td class="" data-spec="usb">USB Type-C 3.2</td>
+                    </tr>
+                  </tbody>
+                </table>
+
+
+                <table cellspacing="0">
+                  <tbody>
+                    <tr>
+                      <th rowspan="9" scope="row">Features</th>
+                      <td class=""><a href="glossary.php3?term=sensors">Sensors</a></td>
+                      <td class="" data-spec="sensors">Fingerprint (side-mounted), accelerometer, gyro, proximity,
+                        compass, barometer</td>
+                    </tr>
+
+
+
+
+
+
+                    <tr>
+                      <td class="">&nbsp;</td>
+                      <td class="" data-spec="featuresother">Bixby natural language commands and dictation<br>
+                        Samsung DeX (desktop experience support)<br>
+                        Samsung Pay (Visa, MasterCard certified)<br>
+                        Ultra Wideband (UWB) support</td>
+                    </tr>
+
+                  </tbody>
+                </table>
+
+
+                <table cellspacing="0">
+                  <tbody>
+                    <tr>
+                      <th rowspan="7" scope="row">Battery</th>
+                      <td class=""><a href="glossary.php3?term=rechargeable-battery-types">Type</a></td>
+                      <td class="" data-spec="batdescription1">Li-Po 4400 mAh, non-removable</td>
+                    </tr>
+                    <tr>
+                      <td class=""><a href="glossary.php3?term=battery-charging">Charging</a></td>
+                      <td class="">Fast charging 25W<br>
+                        Fast wireless charging 11W<br>
+                        Reverse wireless charging 4.5W</td>
+                    </tr>
+
+
+                  </tbody>
+                </table>
+
+
+                <table cellspacing="0">
+                  <tbody>
+                    <tr>
+                      <th rowspan="6" scope="row">Misc</th>
+                      <td class=""><a href="glossary.php3?term=build">Colors</a></td>
+                      <td class="" data-spec="colors">Phantom Black, Phantom Silver, Phantom Green, Thom Browne
+                        Edition, Wooyoungmi Edition</td>
+                    </tr>
+
+                    <tr>
+                      <td class=""><a href="glossary.php3?term=models">Models</a></td>
+                      <td class="" data-spec="models">SM-F926B, SM-F926B/DS, SM-F926U, SM-F926U1, SM-F926W</td>
+                    </tr>
+
+                    <tr>
+                      <td class=""><a href="glossary.php3?term=sar">SAR</a></td>
+                      <td class="" data-spec="sar-us">0.73 W/kg (head) &nbsp; &nbsp; 1.22 W/kg (body) &nbsp; &nbsp;
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class=""><a href="glossary.php3?term=sar">SAR EU</a></td>
+                      <td class="" data-spec="sar-eu">1.04 W/kg (head) &nbsp; &nbsp; 1.44 W/kg (body) &nbsp; &nbsp;
+                      </td>
+                    </tr>
+
+
+                    <tr>
+                      <td class=""><a href="glossary.php3?term=price">Price</a></td>
+                      <td class="" data-spec="price"><a href="samsung_galaxy_z_fold3_5g-price-10906.php">$ 1,499.99 /
+                          € 1,499.00 / £ 1,200.00 / ₹ 149,999 / C$ 1,999.98 / Rp 24,999,000</a></td>
+                    </tr>
+                  </tbody>
+                </table>
+
+
+                <table cellspacing="0">
+                  <tbody>
+                    <tr>
+                      <th rowspan="4" scope="row">Tests</th>
+                      <td class=""><a href="glossary.php3?term=benchmarking">Performance</a></td>
+                      <td class="" data-spec="tbench">
+                        AnTuTu: 635918 (v8), 752218 (v9)<br>
+                        GeekBench: 12719 (v4.4), 3239 (v5.1)<br>
+                        GFXBench: 38fps (ES 3.1 onscreen)</td>
+                    </tr>
+                    <tr>
+
+
+                      <td class=""><a href="gsmarena_lab_tests-review-751p5.php">Camera</a></td>
+                      <td class="">
+                        <a class="noUnd" href="piccmp.php3?idType=1&amp;idPhone1=10906&amp;nSuggest=1">Photo</a> / <a
+                          class="noUnd" href="vidcmp.php3?idType=3&amp;idPhone1=10906&amp;nSuggest=1">Video</a>
+                      </td>
+                    </tr>
+                    <tr>
+
+                      <td class=""><a href="gsmarena_lab_tests-review-751p7.php">Loudspeaker</a></td>
+                      <td class="">
+                        <a class="noUnd" href="">-25.6 LUFS (Very good)</a>
+
+                      </td>
+                    </tr>
+                    <tr>
+
+
+
+                      <td class=""><a href="gsmarena_lab_tests-review-751p6.php">Battery life</a></td>
+                      <td class="" data-spec="batlife">
+                        <div style="position:relative;">
+                          <a href="#" onclick="showBatteryPopup(event, 10906); ">Endurance rating 75h</a>
+                          <div class="popover top" id="battery-popover" style="display: none;"></div>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+
+                    </tr>
+                  </tbody>
+                </table>
+
+
+
+              </div>
+              <!-- table -->
+
+
+
+
+
+
+
+
+
+
+
+
+            </div>
+            <!-- view each -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+          </div>
+
+        </div>
+
+      </div>
+      <br><br><br>
+
+      <br>
+
+      <br>
+
+      <br>
+
+    </section>
+  </main>
+
+  <!-- main end -->
+
+  <!-- Ajax -->
+  <script type="text/javascript">
+    var q;
+    function myData1() {
+      q = document.getElementById('mySearchQ1').value;
+
+      var myReq = new XMLHttpRequest();
+
+      myReq.onreadystatechange = function () {
+
+        if (this.readyState == 4 && this.status == 200) {
+          document.getElementById("myData1").innerHTML = this.responseText;
+        }
+      }
+
+      myReq.open("GET", "searchajax1.php?mobilename=" + q, true);
+
+      myReq.send();
+      document.getElementById('showme').style.display = "inline-block";
+
+    }
+  </script>
+
+
+
+  <!-- section  end -->
+
+
+
+
+  <script src="assets/vendor/js/jquery-1.12.4.min.js"></script>
+  <script src="assets/vendor/js/tilt.jquery.js"></script>
+  <script src="assets/vendor/js/animation.js"></script>
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>

@@ -1,0 +1,7 @@
+html 
+bootstrap
+icons
+peacock
+night owl
+live server
+auto rename
